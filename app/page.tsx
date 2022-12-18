@@ -28,7 +28,9 @@ export interface IPeople {
 const inter = Inter({ subsets: ["latin"] });
 
 async function getPeople() {
-    const res = await fetch(`${getAbsoluteUrl()}/api/people`);
+    const res = await fetch(`${getAbsoluteUrl()}/api/people`, {
+        cache: "no-store",
+    });
     const data = await res.json();
     return data;
 }
