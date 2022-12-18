@@ -1,6 +1,8 @@
 @import "mixins";
 
 .container {
+    position: relative;
+    padding-bottom: 50px;
     padding-left: 32px;
     padding-right: 32px;
     min-height: 100vh;
@@ -44,8 +46,6 @@
             margin-top: 15px;
         }
         transition: all 1s;
-        width: 22;
-
         .personCard {
             position: relative;
             height: 125px;
@@ -108,6 +108,17 @@
             display: flex;
             flex-wrap: wrap;
             flex-grow: 1;
+        }
+    }
+    .footer {
+        position: absolute;
+        margin-top: 20px;
+        font-size: 16px;
+        bottom: 10px;
+        right: 10px;
+        
+        a{
+            color: rgb(174, 0, 255);
         }
     }
 }

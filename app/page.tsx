@@ -104,12 +104,12 @@ export default async function Home() {
                     <div>{sortedMales[0].contestantdetails.fullName}</div>
                     <div className={style.votes}>
                         <div>
-                            {sortedMales[0].voteCountLike}
+                            {numberWithCommas(sortedMales[0].voteCountLike)}
                             <FaArrowCircleUp className={style.upVote} />
                         </div>
                         <div>
                             <FaArrowCircleDown className={style.downVote} />
-                            {sortedMales[0].voteCountDislike}
+                            {numberWithCommas(sortedMales[0].voteCountDislike)}
                         </div>
                     </div>
                 </a>
@@ -130,8 +130,9 @@ export default async function Home() {
                             <FaArrowCircleUp className={style.upVote} />
                         </div>
                         <div>
+                        <FaArrowCircleDown className={style.downVote} />
+
                             {numberWithCommas(sortedFemales[0].voteCountDislike)}
-                            <FaArrowCircleDown className={style.downVote} />
                         </div>
                     </div>
                 </a>
@@ -198,6 +199,11 @@ export default async function Home() {
                         );
                     })}
                 </div>
+            </div>
+
+            <div className={style.footer}>
+                Eğlence amaçlı yapılmıştır. Rahatsızlık bildirimi için <a href="mailto: mdogruca@gmail.com">mdogruca@gmail.com</a> ile iletişime
+                geçebilirsiniz.
             </div>
         </div>
     );
