@@ -6,8 +6,8 @@ import { FaArrowCircleDown, FaArrowCircleUp } from "react-icons/fa";
 
 import { Inter } from "@next/font/google";
 import { prepareInstagram } from "../utils/prepareInstagram";
-import Test from "./test";
-import Analytics from "./test";
+import Test from "./analytics";
+import Analytics from "./analytics";
 import { numberWithCommas } from "../utils/numberWithCommas";
 
 export interface IPerson {
@@ -27,14 +27,14 @@ export interface IPeople {
 
 const inter = Inter({ subsets: ["latin"] });
 
-async function getSomething() {
-    const res = await fetch(`${getAbsoluteUrl()}/api/hello`);
+async function getPeople() {
+    const res = await fetch(`${getAbsoluteUrl()}/api/people`);
     const data = await res.json();
     return data;
 }
 
 export default async function Home() {
-    const data = await getSomething();
+    const data = await getPeople();
 
     const malesWithLike = data.favoriteMale.map((e: any) => {
         e.type = "like";
@@ -130,7 +130,7 @@ export default async function Home() {
                             <FaArrowCircleUp className={style.upVote} />
                         </div>
                         <div>
-                        <FaArrowCircleDown className={style.downVote} />
+                            <FaArrowCircleDown className={style.downVote} />
 
                             {numberWithCommas(sortedFemales[0].voteCountDislike)}
                         </div>
