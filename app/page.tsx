@@ -34,7 +34,12 @@ async function getPeople() {
 }
 
 export default async function Home() {
-    const data = await getPeople();
+    let data;
+    try {
+        data = await getPeople();
+    } catch {
+        return <div>Something went wrong</div>;
+    }
 
     const malesWithLike = data.favoriteMale.map((e: any) => {
         e.type = "like";
