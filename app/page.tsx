@@ -105,6 +105,7 @@ export default async function Home() {
                             src={sortedMales[0].contestantdetails.imageUrl}
                             alt={""}
                             fill={true}
+                            quality={30}
                             style={{ objectFit: "cover", objectPosition: "top" }}
                         />
                     </div>
@@ -127,6 +128,7 @@ export default async function Home() {
                             src={sortedFemales[0].contestantdetails.imageUrl}
                             alt={""}
                             fill={true}
+                            quality={30}
                             style={{ objectFit: "cover", objectPosition: "top" }}
                         />
                     </div>
@@ -156,6 +158,7 @@ export default async function Home() {
                                         src={item.contestantdetails.imageUrl}
                                         alt={""}
                                         fill={true}
+                                        quality={30}
                                         style={{ objectFit: "cover", objectPosition: "top" }}
                                     />
                                 </div>
@@ -188,6 +191,7 @@ export default async function Home() {
                                         src={item.contestantdetails.imageUrl}
                                         alt={""}
                                         fill={true}
+                                        quality={30}
                                         style={{ objectFit: "cover", objectPosition: "top" }}
                                     />
                                 </div>
