@@ -3,6 +3,6 @@ export function getAbsoluteUrl() {
         return 'http://localhost:3000'
     }
     else if (process.env.NODE_ENV == 'production') {
-        return process.env.VERCEL_URL ?? 'http://localhost:3000'
+        return 'https://askin-kotu-arayuzu.vercel.app'
     }
 }
