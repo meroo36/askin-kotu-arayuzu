@@ -111,13 +111,13 @@ export default async function Home() {
                     </div>
                     <div>{sortedMales[0].contestantdetails.fullName}</div>
                     <div className={style.votes}>
-                        <div>
-                            {numberWithCommas(sortedMales[0].voteCountLike)}
-                            <FaArrowCircleUp className={style.upVote} />
+                        <div className={style.left}>
+                        {numberWithCommas(sortedMales[0].voteCountLike)}
+                        <FaArrowCircleUp className={style.upVote} />
                         </div>
-                        <div>
-                            <FaArrowCircleDown className={style.downVote} />
-                            {numberWithCommas(sortedMales[0].voteCountDislike)}
+                        <div className={style.right}>
+                        <FaArrowCircleDown className={style.downVote} />
+                        {numberWithCommas(sortedMales[0].voteCountDislike)}
                         </div>
                     </div>
                 </a>
@@ -134,13 +134,12 @@ export default async function Home() {
                     </div>
                     <div>{sortedFemales[0].contestantdetails.fullName}</div>
                     <div className={style.votes}>
-                        <div>
+                        <div className={style.left}>
                             {numberWithCommas(sortedFemales[0].voteCountLike)}
                             <FaArrowCircleUp className={style.upVote} />
                         </div>
-                        <div>
+                        <div className={style.right}>
                             <FaArrowCircleDown className={style.downVote} />
-
                             {numberWithCommas(sortedFemales[0].voteCountDislike)}
                         </div>
                     </div>
@@ -165,11 +164,12 @@ export default async function Home() {
 
                                 <div>{item.contestantdetails.fullName}</div>
                                 <div className={style.votes}>
-                                    <div>
-                                        {numberWithCommas(item.voteCountLike)}
+                                    <div className={style.left}>
+                                       
                                         <FaArrowCircleUp className={style.upVote} />
+                                         {numberWithCommas(item.voteCountLike)}
                                     </div>
-                                    <div>
+                                    <div className={style.right}>
                                         <FaArrowCircleDown className={style.downVote} />
                                         {numberWithCommas(item.voteCountDislike)}
                                     </div>
@@ -197,11 +197,12 @@ export default async function Home() {
                                 </div>
                                 <div>{item.contestantdetails.fullName}</div>
                                 <div className={style.votes}>
-                                    <div>
-                                        {numberWithCommas(item.voteCountLike)}
+                                    <div className={style.left}>
+                                        
                                         <FaArrowCircleUp className={style.upVote} />
+                                        {numberWithCommas(item.voteCountLike)}
                                     </div>
-                                    <div>
+                                    <div className={style.right}>
                                         <FaArrowCircleDown className={style.downVote} />
                                         {numberWithCommas(item.voteCountDislike)}
                                     </div>
